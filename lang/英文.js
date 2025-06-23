@@ -1,15 +1,15 @@
 export default {
   "skin": {
-    "Blue": "\r",
-    "Green": "\r",
-    "Red": "\r",
-    "Purple": "\r",
-    "Default": "\r"
+    "Blue": "",
+    "Green": "",
+    "Red": "",
+    "Purple": "",
+    "Default": ""
   },
   "layout": {
     "nav": {
-      "title": "\r",
-      "languageSwitch": "\r",
+      "title": "",
+      "languageSwitch": "",
       "theme": ""
     }
   }

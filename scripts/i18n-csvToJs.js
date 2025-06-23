@@ -24,7 +24,7 @@ function parseCSV2Obj(csvStr) {
     const list = dataRows.map((d) => {
       const arr = d.split('\t')
       const key = arr[0] ? arr[0].trim() : ''
-      const value = arr[index + 1]
+      const value = arr[index + 1].trim()
       return { key, value: value }
     })
     const obj = parseSingleLangToObj(list)
