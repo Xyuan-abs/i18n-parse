@@ -12,7 +12,7 @@ const filePath = path.resolve(__dirname, '../translations.csv')
 const str = readFileSync(filePath, 'utf8')
 
 function parseCSV2Obj(csvStr) {
-  const [headRow, ...dataRows] = csvStr.split('\n').filter(Boolean)
+  const [headRow, ...dataRows] = csvStr.split('\n').filter((d) => d.split('\t').filter(Boolean).length)
 
   const langList = headRow.split('\t').filter(Boolean).slice(1)
 
