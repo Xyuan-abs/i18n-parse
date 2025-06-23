@@ -12,4 +12,4 @@
 步骤
 
 1. 将翻译好的 Excel 文件内容复制到 **translations.csv** 文件里
-2. 运行 `node ./scripts/i18n-csvToObj.js`,在`/lang/`下生成翻译好的 **多语言 JS 文件**
+2. 运行 `node ./scripts/i18n-csvToJs`,在`/lang/`下生成翻译好的 **多语言 JS 文件**
