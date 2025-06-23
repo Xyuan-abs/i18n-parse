@@ -14,12 +14,16 @@ const str = readFileSync(filePath, 'utf8')
 function parseCSV2Obj(csvStr) {
   const [headRow, ...dataRows] = csvStr.split('\n').filter((d) => d.split('\t').filter(Boolean).length)
 
-  const langList = headRow.split('\t').filter(Boolean).slice(1)
+  const langList = headRow
+    .split('\t')
+    .map((lang) => lang.trim())
+    .filter(Boolean)
+    .slice(1)
 
   langList.forEach((lang, index) => {
     const list = dataRows.map((d) => {
       const arr = d.split('\t')
-      const key = arr[0]
+      const key = arr[0] ? arr[0].trim() : ''
       const value = arr[index + 1]
       return { key, value: value }
     })
